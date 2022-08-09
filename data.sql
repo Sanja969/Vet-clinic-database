@@ -55,14 +55,20 @@ WHERE name like '%mon';
 UPDATE animals SET species = 'pokemon'
 WHERE species = 'unspecified';
 
+BEGIN;
+SAVEPOINT first_savepoint;
+DELETE FROM animals;
+ROLLBACK TO SAVEPOINT first_savepoint;
+COMMIT;
+
 DELETE FROM animals
 WHERE date_of_birth > 'January 1, 2022';
 
 
 BEGIN;
-SAVEPOINT first_savepoint;
+SAVEPOINT second_savepoint;
 UPDATE animals SET weight_kg = weight_kg * -1;
-ROLLBACK TO SAVEPOINT first_savepoint;
+ROLLBACK TO SAVEPOINT second_savepoint;
 UPDATE animals SET weight_kg = weight_kg * -1
 WHERE weight_kg < 0;
 COMMIT;
