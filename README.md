@@ -1,7 +1,12 @@
-# curriculum-databases-projects-template
+# Vet Clinic - PostgreSQL
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+> Used a PostgreSQL to create the data structure for a vet clinic. Made animlas, animals' owners, clinic employees, visits table with relations. There are the next sql files:
+
+1. schema.sql with code for creating tables, included code for updating and creating columns, and adding foreign keys to the existing tables, to make relation to another table.
+
+2. data.sql with code for importing raws - data in tables and updating data in desired columns regarding to the some condsion.
+
+3. queries.sql with answered question using aggregates functions, GROUP BY and JOIN tool. 
 
 
 ## Getting Started
@@ -15,17 +20,12 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## Authors
 
-👤 **Author1**
+👤 **Sanja Mandic**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+I am an aspiring web developer from Serbia.
+- GitHub: [@sanjaGit](https://github.com/Sanja969)
+- Twitter: [@sanjaTwit](https://twitter.com/SanjaMandic42)
+- LinkedIn: [@sanjaIn](https://linkedin.com/in/sanja-mandic-823995a2/)
 
 ## 🤝 Contributing
 
