@@ -1,12 +1,12 @@
 # Vet Clinic - PostgreSQL
 
-> Used a PostgreSQL to create the data structure for a vet clinic. Made animlas, animals' owners, clinic employees, visits table with relations. There are the next sql files:
+Used a PostgreSQL to create the data structure for a vet clinic. Made animlas, animals' owners, clinic employees, visits table with relations. There are the next sql files:
 
-1. schema.sql with code for creating tables, included code for updating and creating columns, and adding foreign keys to the existing tables, to make relation to another table.
+- schema.sql with code for creating tables, included code for updating and creating columns, and adding foreign keys to the existing tables, to make relation to another table.
 
-2. data.sql with code for importing raws - data in tables and updating data in desired columns regarding to the some condsion.
+- data.sql with code for importing raws - data in tables and updating data in desired columns regarding to the some condsion.
 
-3. queries.sql with answered question using aggregates functions, GROUP BY and JOIN tool. 
+- queries.sql with answered question using aggregates functions, GROUP BY and JOIN tool. 
 
 
 ## Getting Started
