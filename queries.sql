@@ -140,7 +140,9 @@ INNER JOIN vets v
 INNER JOIN species s
   ON s.id = a.species_id
 WHERE v.name = 'Maisy Smith'
-GROUP BY (v.name, s.name);
+GROUP BY (v.name, s.name)
+order by count desc
+limit 1;
 
 
 
