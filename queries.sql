@@ -78,13 +78,12 @@ INNER JOIN vets v
 WHERE vis.date_of_visit = (select max(date_of_visit) FROM visits WHERE vets_id=1) 
 ORDER BY vis.date_of_visit desc;
 
-SELECT v.name, a.name FROM visits vis
+SELECT count(a.name) FROM visits vis
 INNER JOIN animals a
   ON a.id = vis.animals_id
 INNER JOIN vets v
   ON v.id = vis.vets_id
-WHERE v.name = 'Stephanie Mendez'
-GROUP BY (v.name, a.name);
+WHERE v.name = 'Stephanie Mendez';
 
 SELECT v.name, s.name FROM specializations sp
 INNER JOIN species s
@@ -105,7 +104,8 @@ INNER JOIN animals a
 INNER JOIN vets v
   ON v.id = vis.vets_id
 GROUP BY a.name
-order by count desc;
+order by count desc
+limit 1;
 
 SELECT v.name, a.name, date_of_visit FROM visits vis
 INNER JOIN animals a
