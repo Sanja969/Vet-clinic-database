@@ -51,3 +51,40 @@ ALTER TABLE animals
 ALTER TABLE animals
   ADD FOREIGN KEY (owner_id) REFERENCES owners (id) ON DELETE CASCADE ON UPDATE CASCADE;
   
+
+-- CREATE VETS TABLE AND CONNECTIONS TABLES FOR VISITING AND FOR VETS SPECIALITIES - DAY 4 
+
+DROP TABLE IF EXISTS vets;
+
+CREATE TABLE vets (
+  id serial PRIMARY KEY,
+  name varchar(100),
+  age int,
+  date_of_graduation date
+);
+
+DROP TABLE IF EXISTS specializations;
+
+CREATE TABLE specializations (
+  species_id int,
+  vets_id int,
+  PRIMARY KEY (species_id, vets_id)
+);
+
+DROP TABLE IF EXISTS visits;
+
+CREATE TABLE visits (
+  animals_id int,
+  vets_id int,
+  date_of_visit date,
+  PRIMARY KEY (animals_id, vets_id, date_of_visit)
+);
+
+ALTER TABLE visits
+  ADD FOREIGN KEY (animals_id) REFERENCES animals (id) ON DELETE CASCADE ON UPDATE cascade,
+  ADD FOREIGN KEY (vets_id) REFERENCES vets (id) ON DELETE CASCADE ON UPDATE cascade;
+  
+ALTER TABLE specializations
+  ADD FOREIGN KEY (species_id) REFERENCES species (id) ON DELETE CASCADE ON UPDATE cascade,
+  ADD FOREIGN KEY (vets_id) REFERENCES vets (id) ON DELETE CASCADE ON UPDATE cascade;
+
