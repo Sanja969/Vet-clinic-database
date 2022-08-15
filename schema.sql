@@ -88,3 +88,22 @@ ALTER TABLE specializations
   ADD FOREIGN KEY (species_id) REFERENCES species (id) ON DELETE CASCADE ON UPDATE cascade,
   ADD FOREIGN KEY (vets_id) REFERENCES vets (id) ON DELETE CASCADE ON UPDATE cascade;
 
+--WEEK 2
+
+-- ADD EMAIL COLUMN TO THE TABLE
+
+ALTER TABLE owners 
+ADD COLUMN email VARCHAR(120);
+
+ALTER TABLE visits
+ALTER COLUMN date_of_visit TYPE timestamp;
+
+-- IN ORDER TO DECREASE EXCUTION TIME, ADD INDEXES TO SORT VISITS AND OWNERS' TABLES ACCORDING TO WANTED COLUMNS
+DROP INDEX animals_id_asc, vets_id_asc, email_asc;
+
+CREATE INDEX animals_id_asc ON visits(animals_id asc);
+
+CREATE INDEX vets_id_asc ON visits(vets_id asc);
+
+CREATE INDEX email_asc ON owners(email asc);
+

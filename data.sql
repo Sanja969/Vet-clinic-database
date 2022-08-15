@@ -132,3 +132,13 @@ VALUES (1, 1, 'May 24, 2020'),
   (9, 2, 'August 3, 2020'),
   (10, 3, 'May 24, 2020'),
   (10, 1, 'January 11, 2021');
+
+-- week 2
+
+delete from visits;
+INSERT INTO visits (animals_id, vets_id, date_of_visit) SELECT * FROM (SELECT id FROM animals) 
+animals_id, 
+(SELECT id FROM vets) vet_ids,
+generate_series('1900-01-01'::timestamp, '2022-01-01', '1 hours') visit_timestamp;
+
+insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
