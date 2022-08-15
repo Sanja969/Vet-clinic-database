@@ -104,8 +104,8 @@ INNER JOIN animals a
 INNER JOIN vets v
   ON v.id = vis.vets_id
 GROUP BY a.name
-order by count desc
-limit 1;
+ORDER BY count desc
+LIMIT 1;
 
 SELECT v.name, a.name, date_of_visit FROM visits vis
 INNER JOIN animals a
@@ -113,7 +113,7 @@ INNER JOIN animals a
 INNER JOIN vets v
   ON v.id = vis.vets_id
 WHERE date_of_visit = (select min(date_of_visit) FROM visits WHERE vets_id = 2)
-order by date_of_visit;
+ORDER BY date_of_visit;
 
 SELECT a.name, v.name, date_of_visit  FROM visits vis
 INNER JOIN animals a
@@ -141,9 +141,14 @@ INNER JOIN species s
   ON s.id = a.species_id
 WHERE v.name = 'Maisy Smith'
 GROUP BY (v.name, s.name)
-order by count desc
-limit 1;
+ORDER BY count desc
+LIMIT 1;
 
+--week 2
+-- query plans 
 
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animals_id = 4;
+EXPLAIN ANALYZE SELECT * FROM visits where vets_id = 2;
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
 
 
