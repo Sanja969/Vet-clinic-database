@@ -100,6 +100,3 @@ ALTER COLUMN date_of_visit TYPE timestamp;
 
 -- IN ORDER TO DECREASE EXCUTION TIME, ADD INDEXES TO SORT VISITS AND OWNERS' TABLES ACCORDING TO WANTED COLUMNS
 
-CREATE INDEX animals_id_asc ON visits(animals_id asc);
-CREATE INDEX vets_id_asc ON visits(vets_id asc);
-CREATE INDEX email_asc ON owners(email asc);
