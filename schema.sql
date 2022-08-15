@@ -88,11 +88,3 @@ ALTER TABLE specializations
   ADD FOREIGN KEY (species_id) REFERENCES species (id) ON DELETE CASCADE ON UPDATE cascade,
   ADD FOREIGN KEY (vets_id) REFERENCES vets (id) ON DELETE CASCADE ON UPDATE cascade;
 
-DROP INDEX animals_id_asc, vets_id_asc, email_asc;
-
-CREATE INDEX animals_id_asc ON visits(animals_id asc);
-
-CREATE INDEX vets_id_asc ON visits(vets_id asc);
-
-CREATE INDEX email_asc ON owners(email asc);
-
