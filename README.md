@@ -9,7 +9,11 @@ Used a PostgreSQL to create the data structure for a vet clinic. Made animlas, a
 - queries.sql with answered question using aggregates functions, GROUP BY and JOIN tool. 
 
 
+## ER Diagram
+
 ## Getting Started
+
+ <img src="/scrvet_clinic1 - public1.png" alt="ER Diagram">
 
 This repository includes files with plain SQL that can be used to recreate a database:
 
