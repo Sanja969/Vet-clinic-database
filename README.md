@@ -13,7 +13,7 @@ Used a PostgreSQL to create the data structure for a vet clinic. Made animlas, a
 
 ## Getting Started
 
- <img src="/scrvet_clinic1 - public1.png" alt="ER Diagram">
+ <img src="/images/vet_clinic1 - public1.png" alt="ER Diagram">
 
 This repository includes files with plain SQL that can be used to recreate a database:
 
